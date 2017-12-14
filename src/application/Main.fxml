@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Welcome">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="92.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="85.0" prefWidth="460.0">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="336.0" text="A web scrapped desktop version of TutorialsPoint.com">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Bibhuranjan Sandhibigraha - IIIT Bhubaneswar" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox prefHeight="28.0" prefWidth="700.0" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="379.0" prefWidth="359.0">
+               <children>
+                  <ImageView fitHeight="72.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../Img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="69.0" prefWidth="247.0" text="Welcome to TutorialsPoint" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <padding>
+                        <Insets top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Book Antiqua" size="19.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="#2600ff" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <JFXButton fx:id="start" onAction="#openContents" style="-fx-border-color: blue; -fx-border-radius: 2 10 2 10;" text="Get Started" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="0.9857142857142858" endY="1.0" startX="0.09523809523809529" startY="0.10952380952380955">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="#00dbff" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <effect>
+      <InnerShadow color="#144d10" height="255.0" radius="127.0" width="255.0" />
+   </effect>
+</BorderPane>
